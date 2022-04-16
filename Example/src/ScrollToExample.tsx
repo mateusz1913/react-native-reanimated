@@ -68,14 +68,16 @@ function Digit({ digit }: { digit: Animated.SharedValue<number> }) {
   const aref = useAnimatedRef<Animated.ScrollView>();
 
   useDerivedValue(() => {
-    if (Platform.OS === 'web') {
-      if (aref && aref.current) {
-        aref.current.getNode().scrollTo({ y: digit.value * 200 });
-      }
-    } else {
-      // TODO fix this
-      scrollTo(aref, 0, digit.value * 200, true);
-    }
+    // if (Platform.OS === 'web') {
+    //   if (aref && aref.current) {
+    //     // aref.current.getNode().scrollTo({ y: digit.value * 200 });
+    //     scrollTo(aref, 0, digit.value * 200, true);
+    //   }
+    // } else {
+    //   // TODO fix this
+    //   scrollTo(aref, 0, digit.value * 200, true);
+    // }
+    scrollTo(aref, 0, digit.value * 200, true);
   });
 
   return (

@@ -28,7 +28,9 @@ import ScrollToExample from './ScrollToExample';
 /* font awesome does not work * /
 import AnimatedTabBarExample from './AnimatedTabBarExample';
 /**/
-import LightboxExample from './WebSpecific/LightBoxExample';
+import LightboxExample from './LightboxExample';
+import ScrollExample from './AnimatedScrollExample';
+// import LightboxExample from './WebSpecific/LightBoxExample';
 /* masked view does not work * /
 import LiquidSwipe from './LiquidSwipe';
 /**/
@@ -86,6 +88,10 @@ const SCREENS: Screens = {
     title: '🆕 Liquid Swipe Example',
   },
   /**/
+  ScrollExample: {
+    screen: ScrollExample,
+    title: 'Scroll Example',
+  },
 };
 type RootStackParams = { Home: undefined } & { [key: string]: undefined };
 type MainScreenProps = {

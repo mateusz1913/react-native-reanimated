@@ -117,6 +117,8 @@ function ListItem({ item, index, onPress }: ListItemProps) {
       // width/height and position to animate from it to the full screen one
       const measurements = measure(ref);
 
+      console.log({ measurements });
+
       width.value = measurements.width;
       height.value = measurements.height;
       x.value = measurements.pageX;
